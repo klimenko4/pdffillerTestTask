@@ -6,11 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
 
     public static final String loginPageUrl = "https://www.pdffiller.com/en/login.htm";
-
 
 
     @FindBy(id = "form-login-email")
@@ -22,10 +21,9 @@ public class LoginPage extends BasePage{
     @FindBy(id = "form-login-submit")
     private WebElement submitButton;
 
-
     public LoginPage(WebDriver driver, WebDriverWait wait) {
-        super(driver,wait);
-        PageFactory.initElements( driver, this);
+        super(driver, wait);
+        PageFactory.initElements(driver, this);
     }
 
     public LoginPage open() {
@@ -37,8 +35,6 @@ public class LoginPage extends BasePage{
         this.userNameInput.sendKeys(login);
         this.passwordInput.sendKeys(password);
         this.submitButton.click();
-        return new FormsPage(driver,wait);
+        return new FormsPage(driver, wait);
     }
-
-
 }

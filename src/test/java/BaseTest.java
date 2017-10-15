@@ -12,7 +12,6 @@ public class BaseTest {
     protected static WebDriver driver;
     protected static WebDriverWait wait;
 
-
     @BeforeMethod
     public static void beforeAll() {
         ChromeDriverManager.getInstance().setup();
